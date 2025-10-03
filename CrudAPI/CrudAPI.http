@@ -1,0 +1,19 @@
+@CrudAPI_HostAddress = http://localhost:5093
+
+GET {{CrudAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{CrudAPI_HostAddress}}/api/empleado/lista
+
+###
+
+POST {{CrudAPI_HostAddress}}/api/empleado/guardar
+Content-Type: application/json
+
+{
+  //EmpleadoDTO
+}
+
+###
