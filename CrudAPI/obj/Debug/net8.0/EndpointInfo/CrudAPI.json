@@ -16,26 +16,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TareaDTO"
-                  }
+                  "$ref": "#/components/schemas/TareaDTOListApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TareaDTO"
-                  }
+                  "$ref": "#/components/schemas/TareaDTOListApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TareaDTO"
-                  }
+                  "$ref": "#/components/schemas/TareaDTOListApiResponse"
                 }
               }
             }
@@ -65,17 +56,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTO"
+                  "$ref": "#/components/schemas/TareaDTOApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTO"
+                  "$ref": "#/components/schemas/TareaDTOApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTO"
+                  "$ref": "#/components/schemas/TareaDTOApiResponse"
                 }
               }
             }
@@ -113,17 +104,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTO"
+                  "$ref": "#/components/schemas/TareaDTOApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTO"
+                  "$ref": "#/components/schemas/TareaDTOApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTO"
+                  "$ref": "#/components/schemas/TareaDTOApiResponse"
                 }
               }
             }
@@ -168,7 +159,24 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -191,7 +199,24 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -237,17 +262,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTO"
+                  "$ref": "#/components/schemas/TareaDTOApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTO"
+                  "$ref": "#/components/schemas/TareaDTOApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTO"
+                  "$ref": "#/components/schemas/TareaDTOApiResponse"
                 }
               }
             }
@@ -286,17 +311,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTO"
+                  "$ref": "#/components/schemas/TareaDTOApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTO"
+                  "$ref": "#/components/schemas/TareaDTOApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTO"
+                  "$ref": "#/components/schemas/TareaDTOApiResponse"
                 }
               }
             }
@@ -349,17 +374,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTOResultadoPaginadoDTO"
+                  "$ref": "#/components/schemas/TareaDTOResultadoPaginadoDTOApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTOResultadoPaginadoDTO"
+                  "$ref": "#/components/schemas/TareaDTOResultadoPaginadoDTOApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TareaDTOResultadoPaginadoDTO"
+                  "$ref": "#/components/schemas/TareaDTOResultadoPaginadoDTOApiResponse"
                 }
               }
             }
@@ -378,26 +403,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UsuarioDTO"
-                  }
+                  "$ref": "#/components/schemas/UsuarioDTOListApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UsuarioDTO"
-                  }
+                  "$ref": "#/components/schemas/UsuarioDTOListApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UsuarioDTO"
-                  }
+                  "$ref": "#/components/schemas/UsuarioDTOListApiResponse"
                 }
               }
             }
@@ -427,17 +443,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsuarioDTO"
+                  "$ref": "#/components/schemas/UsuarioDTOApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsuarioDTO"
+                  "$ref": "#/components/schemas/UsuarioDTOApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsuarioDTO"
+                  "$ref": "#/components/schemas/UsuarioDTOApiResponse"
                 }
               }
             }
@@ -475,17 +491,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsuarioDTO"
+                  "$ref": "#/components/schemas/UsuarioDTOApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsuarioDTO"
+                  "$ref": "#/components/schemas/UsuarioDTOApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsuarioDTO"
+                  "$ref": "#/components/schemas/UsuarioDTOApiResponse"
                 }
               }
             }
@@ -530,7 +546,24 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -553,7 +586,24 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -580,17 +630,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsuarioEstadisticasDTO"
+                  "$ref": "#/components/schemas/UsuarioEstadisticasDTOApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsuarioEstadisticasDTO"
+                  "$ref": "#/components/schemas/UsuarioEstadisticasDTOApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsuarioEstadisticasDTO"
+                  "$ref": "#/components/schemas/UsuarioEstadisticasDTOApiResponse"
                 }
               }
             }
@@ -640,6 +690,26 @@
   },
   "components": {
     "schemas": {
+      "ApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "EstadoTarea": {
         "enum": [
           0,
@@ -726,6 +796,56 @@
         },
         "additionalProperties": false
       },
+      "TareaDTOApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/TareaDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TareaDTOListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TareaDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "TareaDTOResultadoPaginadoDTO": {
         "type": "object",
         "properties": {
@@ -752,6 +872,29 @@
             "type": "integer",
             "format": "int32",
             "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TareaDTOResultadoPaginadoDTOApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/TareaDTOResultadoPaginadoDTO"
           }
         },
         "additionalProperties": false
@@ -797,6 +940,56 @@
         },
         "additionalProperties": false
       },
+      "UsuarioDTOApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/UsuarioDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UsuarioDTOListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UsuarioDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "UsuarioEstadisticasDTO": {
         "type": "object",
         "properties": {
@@ -819,6 +1012,29 @@
           "porcentajeCompletado": {
             "type": "number",
             "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UsuarioEstadisticasDTOApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/UsuarioEstadisticasDTO"
           }
         },
         "additionalProperties": false

@@ -1,11 +1,34 @@
 using CrudAPI.Context;
+using CrudAPI.Extensions;
 using CrudAPI.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// A�adir servicios al contenedor
-builder.Services.AddControllers();
+// Añadir servicios al contenedor
+builder.Services.AddControllers()
+    .ConfigureApiBehaviorOptions(options =>
+    {
+        // Personalizar respuestas de validación del modelo
+        options.InvalidModelStateResponseFactory = context =>
+        {
+            var errors = context.ModelState
+                .Where(e => e.Value.Errors.Count > 0)
+                .SelectMany(x => x.Value.Errors)
+                .Select(x => x.ErrorMessage)
+                .ToList();
+
+            var result = new CrudAPI.Models.ApiResponse
+            {
+                Success = false,
+                Message = "Datos de entrada inválidos",
+                Errors = errors
+            };
+
+            return new Microsoft.AspNetCore.Mvc.BadRequestObjectResult(result);
+        };
+    });
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -22,9 +45,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 
-    // Comenta o elimina esta l�nea para desactivar HTTPS
+    // Comenta o elimina esta línea para desactivar HTTPS
     // app.UseHttpsRedirection();
 }
+
+// Usar el middleware de excepciones personalizado
+app.UseExceptionMiddleware();
 
 app.UseAuthorization();
 app.MapControllers();

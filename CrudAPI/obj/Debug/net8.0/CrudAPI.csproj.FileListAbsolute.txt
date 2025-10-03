@@ -137,3 +137,4 @@ I:\programacion\.net\CrudAPI\CrudAPI\obj\Debug\net8.0\refint\CrudAPI.dll
 I:\programacion\.net\CrudAPI\CrudAPI\obj\Debug\net8.0\CrudAPI.pdb
 I:\programacion\.net\CrudAPI\CrudAPI\obj\Debug\net8.0\CrudAPI.genruntimeconfig.cache
 I:\programacion\.net\CrudAPI\CrudAPI\obj\Debug\net8.0\ref\CrudAPI.dll
+I:\programacion\.net\CrudAPI\CrudAPI\obj\Debug\net8.0\CrudAPI.sourcelink.json

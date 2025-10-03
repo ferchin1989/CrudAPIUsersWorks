@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "I:\\programacion\\.net\\CrudAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{92ADFAE6-06CC-41F6-986C-3FE60F288DD4}|CrudAPI\\CrudAPI.csproj|i:\\programacion\\.net\\crudapi\\crudapi\\services\\tareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92ADFAE6-06CC-41F6-986C-3FE60F288DD4}|CrudAPI\\CrudAPI.csproj|solutionrelative:crudapi\\services\\tareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92ADFAE6-06CC-41F6-986C-3FE60F288DD4}|CrudAPI\\CrudAPI.csproj|i:\\programacion\\.net\\crudapi\\crudapi\\entities\\tarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92ADFAE6-06CC-41F6-986C-3FE60F288DD4}|CrudAPI\\CrudAPI.csproj|solutionrelative:crudapi\\entities\\tarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{92ADFAE6-06CC-41F6-986C-3FE60F288DD4}|CrudAPI\\CrudAPI.csproj|i:\\programacion\\.net\\crudapi\\crudapi\\migrations\\20251003205520_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92ADFAE6-06CC-41F6-986C-3FE60F288DD4}|CrudAPI\\CrudAPI.csproj|solutionrelative:crudapi\\migrations\\20251003205520_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{92ADFAE6-06CC-41F6-986C-3FE60F288DD4}|CrudAPI\\CrudAPI.csproj|i:\\programacion\\.net\\crudapi\\crudapi\\dtos\\tareadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92ADFAE6-06CC-41F6-986C-3FE60F288DD4}|CrudAPI\\CrudAPI.csproj|solutionrelative:crudapi\\dtos\\tareadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92ADFAE6-06CC-41F6-986C-3FE60F288DD4}|CrudAPI\\CrudAPI.csproj|i:\\programacion\\.net\\crudapi\\crudapi\\entities\\tarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92ADFAE6-06CC-41F6-986C-3FE60F288DD4}|CrudAPI\\CrudAPI.csproj|solutionrelative:crudapi\\entities\\tarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,6 +51,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TareaService.cs",
+              "DocumentMoniker": "I:\\programacion\\.net\\CrudAPI\\CrudAPI\\Services\\TareaService.cs",
+              "RelativeDocumentMoniker": "CrudAPI\\Services\\TareaService.cs",
+              "ToolTip": "I:\\programacion\\.net\\CrudAPI\\CrudAPI\\Services\\TareaService.cs",
+              "RelativeToolTip": "CrudAPI\\Services\\TareaService.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T21:08:18.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "20251003205520_2.cs",
               "DocumentMoniker": "I:\\programacion\\.net\\CrudAPI\\CrudAPI\\Migrations\\20251003205520_2.cs",
               "RelativeDocumentMoniker": "CrudAPI\\Migrations\\20251003205520_2.cs",
@@ -54,12 +71,11 @@
               "RelativeToolTip": "CrudAPI\\Migrations\\20251003205520_2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T20:55:20.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-03T20:55:20.734Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "I:\\programacion\\.net\\CrudAPI\\CrudAPI\\appsettings.json",
               "RelativeDocumentMoniker": "CrudAPI\\appsettings.json",
@@ -71,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "I:\\programacion\\.net\\CrudAPI\\CrudAPI\\Program.cs",
               "RelativeDocumentMoniker": "CrudAPI\\Program.cs",
@@ -83,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UsuarioDTO.cs",
               "DocumentMoniker": "I:\\programacion\\.net\\CrudAPI\\CrudAPI\\DTOs\\UsuarioDTO.cs",
               "RelativeDocumentMoniker": "CrudAPI\\DTOs\\UsuarioDTO.cs",
@@ -95,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "I:\\programacion\\.net\\CrudAPI\\CrudAPI\\Services\\UsuarioService.cs",
               "RelativeDocumentMoniker": "CrudAPI\\Services\\UsuarioService.cs",
@@ -107,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "I:\\programacion\\.net\\CrudAPI\\CrudAPI\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "CrudAPI\\Context\\AppDbContext.cs",
@@ -119,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "TareaDTO.cs",
               "DocumentMoniker": "I:\\programacion\\.net\\CrudAPI\\CrudAPI\\DTOs\\TareaDTO.cs",
               "RelativeDocumentMoniker": "CrudAPI\\DTOs\\TareaDTO.cs",
@@ -131,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Tarea.cs",
               "DocumentMoniker": "I:\\programacion\\.net\\CrudAPI\\CrudAPI\\Entities\\Tarea.cs",
               "RelativeDocumentMoniker": "CrudAPI\\Entities\\Tarea.cs",

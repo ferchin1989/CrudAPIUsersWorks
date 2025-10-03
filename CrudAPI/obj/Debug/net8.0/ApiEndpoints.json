@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CrudAPI.DTOs.TareaDTO",
+        "Type": "CrudAPI.Models.ApiResponse\u00601[[CrudAPI.DTOs.TareaDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -46,7 +46,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CrudAPI.DTOs.TareaDTO",
+        "Type": "CrudAPI.Models.ApiResponse\u00601[[CrudAPI.DTOs.TareaDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -77,7 +77,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CrudAPI.DTOs.TareaDTO",
+        "Type": "CrudAPI.Models.ApiResponse\u00601[[CrudAPI.DTOs.TareaDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -106,7 +106,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "CrudAPI.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "CrudAPI.Controllers.TareaController",
@@ -124,7 +134,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CrudAPI.DTOs.TareaDTO",
+        "Type": "CrudAPI.Models.ApiResponse\u00601[[CrudAPI.DTOs.TareaDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -148,7 +158,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "CrudAPI.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "CrudAPI.Controllers.TareaController",
@@ -160,7 +180,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[CrudAPI.DTOs.TareaDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "CrudAPI.Models.ApiResponse\u00601[[System.Collections.Generic.List\u00601[[CrudAPI.DTOs.TareaDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -201,7 +221,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CrudAPI.DTOs.ResultadoPaginadoDTO\u00601[[CrudAPI.DTOs.TareaDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "CrudAPI.Models.ApiResponse\u00601[[CrudAPI.DTOs.ResultadoPaginadoDTO\u00601[[CrudAPI.DTOs.TareaDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -227,7 +247,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CrudAPI.DTOs.UsuarioDTO",
+        "Type": "CrudAPI.Models.ApiResponse\u00601[[CrudAPI.DTOs.UsuarioDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -253,7 +273,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CrudAPI.DTOs.UsuarioEstadisticasDTO",
+        "Type": "CrudAPI.Models.ApiResponse\u00601[[CrudAPI.DTOs.UsuarioEstadisticasDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -282,7 +302,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "CrudAPI.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "CrudAPI.Controllers.UsuarioController",
@@ -300,7 +330,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CrudAPI.DTOs.UsuarioDTO",
+        "Type": "CrudAPI.Models.ApiResponse\u00601[[CrudAPI.DTOs.UsuarioDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -324,7 +354,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "CrudAPI.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "CrudAPI.Controllers.UsuarioController",
@@ -336,7 +376,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[CrudAPI.DTOs.UsuarioDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "CrudAPI.Models.ApiResponse\u00601[[System.Collections.Generic.List\u00601[[CrudAPI.DTOs.UsuarioDTO, CrudAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
