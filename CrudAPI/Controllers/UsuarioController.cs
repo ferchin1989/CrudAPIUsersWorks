@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using CrudAPI.DTOs;
+using CrudAPI.Models;
 using CrudAPI.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -19,95 +20,51 @@ namespace CrudAPI.Controllers
 
         [HttpGet]
         [Route("lista")]
-        public async Task<ActionResult<List<UsuarioDTO>>> ListarUsuarios()
+        public async Task<ActionResult<ApiResponse<List<UsuarioDTO>>>> ListarUsuarios()
         {
-            try
-            {
-                return Ok(await _usuarioService.ListarUsuarios());
-            }
-            catch (System.Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var usuarios = await _usuarioService.ListarUsuarios();
+            return Ok(new ApiResponse<List<UsuarioDTO>>(usuarios, "Usuarios obtenidos correctamente"));
         }
 
         [HttpGet]
         [Route("{id}")]
-        public async Task<ActionResult<UsuarioDTO>> ObtenerUsuario(int id)
+        public async Task<ActionResult<ApiResponse<UsuarioDTO>>> ObtenerUsuario(int id)
         {
-            try
-            {
-                return Ok(await _usuarioService.ObtenerUsuarioPorId(id));
-            }
-            catch (System.Exception ex)
-            {
-                return NotFound(ex.Message);
-            }
+            var usuario = await _usuarioService.ObtenerUsuarioPorId(id);
+            return Ok(new ApiResponse<UsuarioDTO>(usuario, "Usuario obtenido correctamente"));
         }
 
         [HttpPost]
         [Route("crear")]
-        public async Task<ActionResult<UsuarioDTO>> CrearUsuario(UsuarioCreacionDTO usuarioDTO)
+        public async Task<ActionResult<ApiResponse<UsuarioDTO>>> CrearUsuario(UsuarioCreacionDTO usuarioDTO)
         {
-            try
-            {
-                var resultado = await _usuarioService.CrearUsuario(usuarioDTO);
-                return CreatedAtAction(nameof(ObtenerUsuario), new { id = resultado.Id }, resultado);
-            }
-            catch (System.Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var resultado = await _usuarioService.CrearUsuario(usuarioDTO);
+            var response = new ApiResponse<UsuarioDTO>(resultado, "Usuario creado correctamente");
+            return CreatedAtAction(nameof(ObtenerUsuario), new { id = resultado.Id }, response);
         }
 
         [HttpPut]
         [Route("actualizar/{id}")]
-        public async Task<ActionResult> ActualizarUsuario(int id, UsuarioCreacionDTO usuarioDTO)
+        public async Task<ActionResult<ApiResponse>> ActualizarUsuario(int id, UsuarioCreacionDTO usuarioDTO)
         {
-            try
-            {
-                await _usuarioService.ActualizarUsuario(id, usuarioDTO);
-                return NoContent();
-            }
-            catch (System.Exception ex)
-            {
-                if (ex.Message.Contains("no encontrado"))
-                    return NotFound(ex.Message);
-                return BadRequest(ex.Message);
-            }
+            await _usuarioService.ActualizarUsuario(id, usuarioDTO);
+            return Ok(new ApiResponse("Usuario actualizado correctamente"));
         }
 
         [HttpDelete]
         [Route("eliminar/{id}")]
-        public async Task<ActionResult> EliminarUsuario(int id)
+        public async Task<ActionResult<ApiResponse>> EliminarUsuario(int id)
         {
-            try
-            {
-                await _usuarioService.EliminarUsuario(id);
-                return NoContent();
-            }
-            catch (System.Exception ex)
-            {
-                if (ex.Message.Contains("no encontrado"))
-                    return NotFound(ex.Message);
-                return BadRequest(ex.Message);
-            }
+            await _usuarioService.EliminarUsuario(id);
+            return Ok(new ApiResponse("Usuario eliminado correctamente"));
         }
 
         [HttpGet]
         [Route("{id}/estadisticas")]
-        public async Task<ActionResult<UsuarioEstadisticasDTO>> ObtenerEstadisticas(int id)
+        public async Task<ActionResult<ApiResponse<UsuarioEstadisticasDTO>>> ObtenerEstadisticas(int id)
         {
-            try
-            {
-                return Ok(await _usuarioService.ObtenerEstadisticasUsuario(id));
-            }
-            catch (System.Exception ex)
-            {
-                if (ex.Message.Contains("no encontrado"))
-                    return NotFound(ex.Message);
-                return BadRequest(ex.Message);
-            }
+            var estadisticas = await _usuarioService.ObtenerEstadisticasUsuario(id);
+            return Ok(new ApiResponse<UsuarioEstadisticasDTO>(estadisticas, "Estadísticas obtenidas correctamente"));
         }
     }
 }

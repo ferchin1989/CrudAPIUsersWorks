@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using CrudAPI.DTOs;
 using CrudAPI.Entities;
+using CrudAPI.Models;
 using CrudAPI.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -20,137 +21,79 @@ namespace CrudAPI.Controllers
 
         [HttpGet]
         [Route("lista")]
-        public async Task<ActionResult<List<TareaDTO>>> ListarTareas()
+        public async Task<ActionResult<ApiResponse<List<TareaDTO>>>> ListarTareas()
         {
-            try
-            {
-                return Ok(await _tareaService.ListarTareas());
-            }
-            catch (System.Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var tareas = await _tareaService.ListarTareas();
+            return Ok(new ApiResponse<List<TareaDTO>>(tareas, "Tareas obtenidas correctamente"));
         }
 
         [HttpGet]
         [Route("{id}")]
-        public async Task<ActionResult<TareaDTO>> ObtenerTarea(int id)
+        public async Task<ActionResult<ApiResponse<TareaDTO>>> ObtenerTarea(int id)
         {
-            try
-            {
-                return Ok(await _tareaService.ObtenerTareaPorId(id));
-            }
-            catch (System.Exception ex)
-            {
-                return NotFound(ex.Message);
-            }
+            var tarea = await _tareaService.ObtenerTareaPorId(id);
+            return Ok(new ApiResponse<TareaDTO>(tarea, "Tarea obtenida correctamente"));
         }
 
         [HttpPost]
         [Route("crear")]
-        public async Task<ActionResult<TareaDTO>> CrearTarea(TareaCreacionDTO tareaDTO)
+        public async Task<ActionResult<ApiResponse<TareaDTO>>> CrearTarea(TareaCreacionDTO tareaDTO)
         {
-            try
-            {
-                var resultado = await _tareaService.CrearTarea(tareaDTO);
-                return CreatedAtAction(nameof(ObtenerTarea), new { id = resultado.Id }, resultado);
-            }
-            catch (System.Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var resultado = await _tareaService.CrearTarea(tareaDTO);
+            var response = new ApiResponse<TareaDTO>(resultado, "Tarea creada correctamente");
+            return CreatedAtAction(nameof(ObtenerTarea), new { id = resultado.Id }, response);
         }
 
         [HttpPut]
         [Route("actualizar/{id}")]
-        public async Task<ActionResult> ActualizarTarea(int id, TareaActualizacionDTO tareaDTO)
+        public async Task<ActionResult<ApiResponse>> ActualizarTarea(int id, TareaActualizacionDTO tareaDTO)
         {
-            try
-            {
-                await _tareaService.ActualizarTarea(id, tareaDTO);
-                return NoContent();
-            }
-            catch (System.Exception ex)
-            {
-                if (ex.Message.Contains("no encontrada"))
-                    return NotFound(ex.Message);
-                return BadRequest(ex.Message);
-            }
+            await _tareaService.ActualizarTarea(id, tareaDTO);
+            return Ok(new ApiResponse("Tarea actualizada correctamente"));
         }
 
         [HttpDelete]
         [Route("eliminar/{id}")]
-        public async Task<ActionResult> EliminarTarea(int id)
+        public async Task<ActionResult<ApiResponse>> EliminarTarea(int id)
         {
-            try
-            {
-                await _tareaService.EliminarTarea(id);
-                return NoContent();
-            }
-            catch (System.Exception ex)
-            {
-                if (ex.Message.Contains("no encontrada"))
-                    return NotFound(ex.Message);
-                return BadRequest(ex.Message);
-            }
+            await _tareaService.EliminarTarea(id);
+            return Ok(new ApiResponse("Tarea eliminada correctamente"));
         }
 
         [HttpPut]
         [Route("{id}/estado")]
-        public async Task<ActionResult<TareaDTO>> CambiarEstado(int id, TareaEstadoDTO estadoDTO)
+        public async Task<ActionResult<ApiResponse<TareaDTO>>> CambiarEstado(int id, TareaEstadoDTO estadoDTO)
         {
-            try
-            {
-                return Ok(await _tareaService.CambiarEstadoTarea(id, estadoDTO.Estado));
-            }
-            catch (System.Exception ex)
-            {
-                if (ex.Message.Contains("no encontrada"))
-                    return NotFound(ex.Message);
-                return BadRequest(ex.Message);
-            }
+            var tarea = await _tareaService.CambiarEstadoTarea(id, estadoDTO.Estado);
+            return Ok(new ApiResponse<TareaDTO>(tarea, "Estado de tarea actualizado correctamente"));
         }
 
         [HttpPut]
         [Route("{id}/asignar/{usuarioId}")]
-        public async Task<ActionResult<TareaDTO>> AsignarUsuario(int id, int usuarioId)
+        public async Task<ActionResult<ApiResponse<TareaDTO>>> AsignarUsuario(int id, int usuarioId)
         {
-            try
-            {
-                return Ok(await _tareaService.AsignarTareaAUsuario(id, usuarioId));
-            }
-            catch (System.Exception ex)
-            {
-                if (ex.Message.Contains("no encontrada") || ex.Message.Contains("no existe"))
-                    return NotFound(ex.Message);
-                return BadRequest(ex.Message);
-            }
+            var tarea = await _tareaService.AsignarTareaAUsuario(id, usuarioId);
+            return Ok(new ApiResponse<TareaDTO>(tarea, "Tarea asignada correctamente"));
         }
 
         [HttpGet]
         [Route("paginadas")]
-        public async Task<ActionResult<ResultadoPaginadoDTO<TareaDTO>>> ObtenerTareasPaginadas(
+        public async Task<ActionResult<ApiResponse<ResultadoPaginadoDTO<TareaDTO>>>> ObtenerTareasPaginadas(
             [FromQuery] int pagina = 1, 
             [FromQuery] int registrosPorPagina = 10,
             [FromQuery] string? ordenarPor = null,
             [FromQuery] string? buscar = null)
         {
-            try
+            var paginacion = new PaginacionDTO
             {
-                var paginacion = new PaginacionDTO
-                {
-                    Pagina = pagina > 0 ? pagina : 1,
-                    RegistrosPorPagina = registrosPorPagina > 0 && registrosPorPagina <= 50 ? registrosPorPagina : 10,
-                    OrdenarPor = ordenarPor,
-                    Buscar = buscar
-                };
+                Pagina = pagina > 0 ? pagina : 1,
+                RegistrosPorPagina = registrosPorPagina > 0 && registrosPorPagina <= 50 ? registrosPorPagina : 10,
+                OrdenarPor = ordenarPor,
+                Buscar = buscar
+            };
 
-                return Ok(await _tareaService.ObtenerTareasPaginadas(paginacion));
-            }
-            catch (System.Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var resultado = await _tareaService.ObtenerTareasPaginadas(paginacion);
+            return Ok(new ApiResponse<ResultadoPaginadoDTO<TareaDTO>>(resultado, "Tareas paginadas obtenidas correctamente"));
         }
     }
 }
